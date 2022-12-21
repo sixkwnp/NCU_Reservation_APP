@@ -15,7 +15,7 @@ class loadingPage extends StatelessWidget {
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            Color(0xFF27ECE0),
+            Color.fromARGB(255, 0, 4, 4),
             Colors.white,
           ],
         )),

@@ -1,7 +1,7 @@
 // ignore_for_file: camel_case_types, file_names
 
 import 'package:flutter/material.dart';
-import 'package:ncu_reservation_app/page/personalProfile.dart';
+import 'package:ncu_reservation_app/page/mainPage.dart';
 
 class loginPage extends StatefulWidget {
   const loginPage({Key? key}) : super(key: key);
@@ -80,8 +80,14 @@ class _loginPageState extends State<loginPage> {
                 right: 20.0,
               ),
               child: TextButton(
-                onPressed: () {
-                  // TODO: Add onPressed code!
+                onPressed: () => {
+                  showDialog(
+                    context: context,
+                    builder: (context) => const AlertDialog(
+                      title: Text("很抱歉"),
+                      content: Text("此功能尚未實裝...，敬請期待"),
+                    ),
+                  ),
                 },
                 child: const Text(
                   "忘記密碼？",
@@ -98,10 +104,13 @@ class _loginPageState extends State<loginPage> {
               ),
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (_) => const personalProfile()));
+                  // goto mainPage
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const mainPage(),
+                    ),
+                  );
                 },
                 child: const Text(
                   "登入",

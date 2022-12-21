@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ncu_reservation_app/page/loading_page.dart';
-import 'package:ncu_reservation_app/page/login_page.dart';
-import 'package:ncu_reservation_app/page/board_page.dart';
+import 'package:ncu_reservation_app/page/loadingPage.dart';
+import 'package:ncu_reservation_app/page/loginPage.dart';
+import 'package:ncu_reservation_app/page/boardPage.dart';
 
 void main(List<String> args) {
   runApp(const MyApp());
@@ -33,9 +33,9 @@ class _BottomNavigationControllerState
     extends State<BottomNavigationController> {
   int _currentIndex = 0;
   final List<Widget> _children = [
-    const loading_page(),
-    const login_page(),
-    const board_page(),
+    const boardPage(),
+    const loadingPage(),
+    const loginPage(),
   ];
 
   @override
@@ -48,15 +48,15 @@ class _BottomNavigationControllerState
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.mail),
-            label: 'Messages',
+            label: '布告欄',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            label: 'Profile',
+            label: '預約系統',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.login),
+            label: '登入',
           )
         ],
       ),

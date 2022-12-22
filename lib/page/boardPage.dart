@@ -43,7 +43,7 @@ class _boardPageState extends State<boardPage> {
         child: Column(
           children: [
             const Text(
-              "布告欄",
+              "佈告欄",
               style: TextStyle(
                 height: 3,
                 fontSize: 48,

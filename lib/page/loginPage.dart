@@ -11,6 +11,8 @@ class loginPage extends StatefulWidget {
 }
 
 class _loginPageState extends State<loginPage> {
+  bool passenable = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,23 +56,47 @@ class _loginPageState extends State<loginPage> {
                 ),
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.only(
+            Padding(
+              padding: const EdgeInsets.only(
                 left: 40.0,
                 right: 40.0,
                 top: 15,
                 bottom: 0,
               ),
               child: TextField(
-                obscureText: true,
+                obscureText: passenable,
                 decoration: InputDecoration(
-                  border: OutlineInputBorder(
+                  border: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(
                       Radius.circular(15.0),
                     ),
                   ),
                   labelText: "密碼",
                   hintText: "請輸入您的密碼",
+                  suffix: IconButton(
+                    onPressed: () {
+                      setState(() {
+                        if (passenable == true) {
+                          passenable = false;
+                        } else {
+                          passenable = true;
+                        }
+                      });
+                    },
+                    padding: const EdgeInsets.only(
+                      right: 15.0,
+                    ),
+                    alignment: Alignment.centerRight,
+                    constraints: const BoxConstraints(),
+                    splashColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    icon: Icon(
+                      passenable == true
+                          ? Icons.remove_red_eye
+                          : Icons.password,
+                      size: 20,
+                    ),
+                  ),
                 ),
               ),
             ),

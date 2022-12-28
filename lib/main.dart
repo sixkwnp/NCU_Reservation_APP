@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ncu_reservation_app/page/loginPage.dart';
 import 'package:ncu_reservation_app/page/splash.dart';
 
 void main(List<String> args) {

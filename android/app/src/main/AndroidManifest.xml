@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.ncu_reservation_app">
    <application
-        android:label="ncu_reservation_app"
+        android:label="大K書家"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

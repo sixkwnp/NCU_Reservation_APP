@@ -38,6 +38,8 @@ dependencies:
 
 dev_dependencies:
   flutter_launcher_icons: ^0.7.3
+  flutter_slidable: ^1.2.0
+  time_range_picker: any
   flutter_test:
     sdk: flutter
 

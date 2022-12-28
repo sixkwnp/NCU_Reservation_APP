@@ -52,21 +52,24 @@ class _personalProfileState extends State<personalProfile> {
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: const [
                                 Text(
-                                  "姓名",
+                                  "王小明",
                                   style: TextStyle(
-                                    fontSize: 20,
+                                    fontSize: 35,
+                                    fontFamily: 'ChenYuluoyan-Thin',
                                   ),
                                 ),
                                 Text(
-                                  "學籍",
+                                  "資訊工程學系 二年級",
                                   style: TextStyle(
-                                    fontSize: 20,
+                                    fontSize: 30,
+                                    fontFamily: 'ChenYuluoyan-Thin',
                                   ),
                                 ),
                                 Text(
-                                  "學號",
+                                  "110XXXXXX",
                                   style: TextStyle(
-                                    fontSize: 20,
+                                    fontSize: 30,
+                                    fontFamily: 'ChenYuluoyan-Thin',
                                   ),
                                 ),
                               ],
@@ -77,22 +80,40 @@ class _personalProfileState extends State<personalProfile> {
                     ],
                   ),
                   const SizedBox(
-                    height: 20,
+                    height: 10,
                   ),
                   Column(
                     children: [
                       const Text(
-                        "懲罰時間",
+                        "懲罰時間： 0 小時",
                         style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 30,
+                          fontFamily: 'ChenYuluoyan-Thin',
+                          fontWeight: FontWeight.bold,
                           color: Colors.red,
                         ),
+                      ),
+                      const SizedBox(
+                        height: 10,
                       ),
                       SizedBox(
                         width: double.infinity,
                         child: ElevatedButton(
-                          onPressed: () {
-                            // TODO: edit profile page
+                          style: ButtonStyle(
+                            shape: MaterialStateProperty.all(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                            ),
+                          ),
+                          onPressed: () => {
+                            showDialog(
+                              context: context,
+                              builder: (context) => const AlertDialog(
+                                title: Text("很抱歉"),
+                                content: Text("此功能尚未實裝...，敬請期待"),
+                              ),
+                            ),
                           },
                           child: const Text("編輯個人資料"),
                         ),
@@ -100,6 +121,15 @@ class _personalProfileState extends State<personalProfile> {
                       SizedBox(
                         width: double.infinity,
                         child: ElevatedButton(
+                          style: ButtonStyle(
+                            shape: MaterialStateProperty.all(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                            ),
+                            backgroundColor:
+                                MaterialStateProperty.all(Colors.red),
+                          ),
                           onPressed: () {
                             Navigator.pushReplacement(
                               context,
@@ -124,132 +154,41 @@ class _personalProfileState extends State<personalProfile> {
                         child: Column(
                           children: [
                             const Text(
-                              "預約場地狀況",
+                              "過去預約紀錄",
                               style: TextStyle(
                                 fontSize: 20,
                               ),
                             ),
-                            Container(
+                            SizedBox(
                               height: MediaQuery.of(context).size.height / 2 -
                                   kBottomNavigationBarHeight -
-                                  20,
+                                  30,
                               child: SingleChildScrollView(
                                 scrollDirection: Axis.vertical,
                                 physics: const BouncingScrollPhysics(),
                                 child: Wrap(
                                   direction: Axis.vertical,
-                                  spacing: 120,
-                                  children: <Widget>[
-                                    Row(
-                                      children: const [
-                                        Text(
-                                          "場地名稱",
-                                          style: TextStyle(
-                                            fontSize: 20,
-                                          ),
-                                        ),
-                                        Text(
-                                          "預約日期",
-                                          style: TextStyle(
-                                            fontSize: 20,
-                                          ),
-                                        ),
-                                        Text(
-                                          "預約時間",
-                                          style: TextStyle(
-                                            fontSize: 20,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Row(
-                                      children: const [
-                                        Text(
-                                          "場地名稱",
-                                          style: TextStyle(
-                                            fontSize: 20,
-                                          ),
-                                        ),
-                                        Text(
-                                          "預約日期",
-                                          style: TextStyle(
-                                            fontSize: 20,
-                                          ),
-                                        ),
-                                        Text(
-                                          "預約時間",
-                                          style: TextStyle(
-                                            fontSize: 20,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Row(
-                                      children: const [
-                                        Text(
-                                          "場地名稱",
-                                          style: TextStyle(
-                                            fontSize: 20,
-                                          ),
-                                        ),
-                                        Text(
-                                          "預約日期",
-                                          style: TextStyle(
-                                            fontSize: 20,
-                                          ),
-                                        ),
-                                        Text(
-                                          "預約時間",
-                                          style: TextStyle(
-                                            fontSize: 20,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Row(
-                                      children: const [
-                                        Text(
-                                          "場地名稱",
-                                          style: TextStyle(
-                                            fontSize: 20,
-                                          ),
-                                        ),
-                                        Text(
-                                          "預約日期",
-                                          style: TextStyle(
-                                            fontSize: 20,
-                                          ),
-                                        ),
-                                        Text(
-                                          "預約時間",
-                                          style: TextStyle(
-                                            fontSize: 20,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Row(
-                                      children: const [
-                                        Text(
-                                          "場地名稱",
-                                          style: TextStyle(
-                                            fontSize: 20,
-                                          ),
-                                        ),
-                                        Text(
-                                          "預約日期",
-                                          style: TextStyle(
-                                            fontSize: 20,
-                                          ),
-                                        ),
-                                        Text(
-                                          "預約時間",
-                                          style: TextStyle(
-                                            fontSize: 20,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
+                                  spacing: 10,
+                                  children: const <Widget>[
+                                    // get data from json
+                                    Text(
+                                        "2021/10/10 10:00 - 11:00, 1 小時, 預約 A2"),
+                                    Text(
+                                        "2021/10/10 10:00 - 11:00, 1 小時, 預約 A2"),
+                                    Text(
+                                        "2021/10/10 10:00 - 11:00, 1 小時, 預約 A2"),
+                                    Text(
+                                        "2021/10/10 10:00 - 11:00, 1 小時, 預約 A2"),
+                                    Text(
+                                        "2021/10/10 10:00 - 11:00, 1 小時, 預約 A2"),
+                                    Text(
+                                        "2021/10/10 10:00 - 11:00, 1 小時, 預約 A2"),
+                                    Text(
+                                        "2021/10/10 10:00 - 11:00, 1 小時, 預約 A2"),
+                                    Text(
+                                        "2021/10/10 10:00 - 11:00, 1 小時, 預約 A2"),
+                                    Text(
+                                        "2021/10/10 10:00 - 11:00, 1 小時, 預約 A2"),
                                   ],
                                 ),
                               ),

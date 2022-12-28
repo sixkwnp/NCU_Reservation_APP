@@ -100,26 +100,60 @@ class _loginPageState extends State<loginPage> {
                 ),
               ),
             ),
-            Container(
-              alignment: Alignment.centerRight,
-              padding: const EdgeInsets.only(
-                right: 20.0,
-              ),
-              child: TextButton(
-                onPressed: () => {
-                  showDialog(
-                    context: context,
-                    builder: (context) => const AlertDialog(
-                      title: Text("很抱歉"),
-                      content: Text("此功能尚未實裝...，敬請期待"),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Container(
+                  alignment: Alignment.centerRight,
+                  padding: const EdgeInsets.only(
+                    right: 20.0,
+                  ),
+                  child: TextButton(
+                    onPressed: () => {
+                      showDialog(
+                        context: context,
+                        builder: (context) => const AlertDialog(
+                          title: Text("很抱歉"),
+                          content: Text("此功能尚未實裝...，敬請期待"),
+                        ),
+                      ),
+                    },
+                    child: const Text(
+                      "立即註冊",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 15,
+                        decoration: TextDecoration.underline,
+                      ),
                     ),
                   ),
-                },
-                child: const Text(
-                  "忘記密碼？",
-                  style: TextStyle(color: Colors.black, fontSize: 15),
                 ),
-              ),
+                Container(
+                  alignment: Alignment.centerRight,
+                  padding: const EdgeInsets.only(
+                    right: 20.0,
+                  ),
+                  child: TextButton(
+                    onPressed: () => {
+                      showDialog(
+                        context: context,
+                        builder: (context) => const AlertDialog(
+                          title: Text("很抱歉"),
+                          content: Text("此功能尚未實裝...，敬請期待"),
+                        ),
+                      ),
+                    },
+                    child: const Text(
+                      "忘記密碼?",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 15,
+                        decoration: TextDecoration.underline,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
             Container(
               height: 57,

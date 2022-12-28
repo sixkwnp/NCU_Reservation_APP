@@ -31,7 +31,7 @@ class _SplashState extends State<Splash> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:const Color.fromARGB(255, 223, 234, 233),
+      backgroundColor: const Color.fromARGB(255, 223, 234, 233),
       body: Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -44,7 +44,7 @@ class _SplashState extends State<Splash> {
               width: 15,
             ),
             Text(
-              'K 中預約',
+              '大 K 書家',
               style: TextStyle(
                 fontSize: 40,
                 fontFamily: 'ChenYuluoyan-Thin',

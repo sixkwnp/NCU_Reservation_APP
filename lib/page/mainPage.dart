@@ -28,7 +28,7 @@ class _BottomNavigationControllerState
   int _currentIndex = 0;
   final List<Widget> _children = [
     const boardPage(),
-    const loadingPage(),
+    const reservationPage(),
     const personalProfile(),
   ];
 

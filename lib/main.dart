@@ -10,7 +10,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // loginPage
     return const MaterialApp(
       home: Splash(),
     );

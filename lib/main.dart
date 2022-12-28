@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ncu_reservation_app/page/loginPage.dart';
+import 'package:ncu_reservation_app/page/splash.dart';
 
 void main(List<String> args) {
   runApp(const MyApp());
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // loginPage
     return const MaterialApp(
-      home: loginPage(),
+      home: Splash(),
     );
   }
 }

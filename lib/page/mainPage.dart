@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ncu_reservation_app/page/loadingPage.dart';
+import 'package:ncu_reservation_app/page/reservationPage.dart';
 import 'package:ncu_reservation_app/page/boardPage.dart';
 import 'package:ncu_reservation_app/page/personalProfile.dart';
 
